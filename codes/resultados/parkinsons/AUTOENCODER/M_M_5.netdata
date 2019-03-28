@@ -1,0 +1,51 @@
+
+---	Treino para o 0-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.2052091360. Bit fail 3410.
+Epochs           51. Current error: 0.0009717818. Bit fail 7.
+
+---	Treino para o 1-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0011664709. Bit fail 9.
+Epochs            8. Current error: 0.0009945597. Bit fail 9.
+
+---	Treino para o 2-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0011442315. Bit fail 11.
+Epochs            5. Current error: 0.0009908669. Bit fail 9.
+
+---	Treino para o 3-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0009995740. Bit fail 10.
+
+---	Treino para o 4-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0011121817. Bit fail 12.
+Epochs            3. Current error: 0.0009451944. Bit fail 12.
+
+---	Treino para o 5-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0009003039. Bit fail 6.
+
+---	Treino para o 6-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0008120209. Bit fail 0.
+
+---	Treino para o 7-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0007714852. Bit fail 0.
+
+---	Treino para o 8-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0007061858. Bit fail 0.
+
+---	Treino para o 9-fold	---
+Max epochs   100000. Desired error: 0.0010000000.
+Epochs            1. Current error: 0.0006714719. Bit fail 0.
+
+
+
+>>>	ACURACIA: 0.011330
+>>>	Hidden neurons: 5
+
+

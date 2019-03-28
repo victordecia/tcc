@@ -1,0 +1,330 @@
+% 1. Title: Glass Identification Database
+% 
+% 2. Sources:
+%     (a) Creator: B. German
+%         -- Central Research Establishment
+%            Home Office Forensic Science Service
+%            Aldermaston, Reading, Berkshire RG7 4PN
+%     (b) Donor: Vina Spiehler, Ph.D., DABFT
+%                Diagnostic Products Corporation
+%                (213) 776-0180 (ext 3014)
+%     (c) Date: September, 1987
+% 
+% 3. Past Usage:
+%     -- Rule Induction in Forensic Science
+%        -- Ian W. Evett and Ernest J. Spiehler
+%        -- Central Research Establishment
+%           Home Office Forensic Science Service
+%           Aldermaston, Reading, Berkshire RG7 4PN
+%        -- Unknown technical note number (sorry, not listed here)
+%        -- General Results: nearest neighbor held its own with respect to the
+%              rule-based system
+% 
+% 4. Relevant Information:n
+%       Vina conducted a comparison test of her rule-based system, BEAGLE, the
+%       nearest-neighbor algorithm, and discriminant analysis.  BEAGLE is 
+%       a product available through VRS Consulting, Inc.; 4676 Admiralty Way,
+%       Suite 206; Marina Del Ray, CA 90292 (213) 827-7890 and FAX: -3189.
+%       In determining whether the glass was a type of "float" glass or not,
+%       the following results were obtained (# incorrect answers):
+% 
+%              Type of Sample                            Beagle   NN    DA
+%              Windows that were float processed (87)     10      12    21
+%              Windows that were not:            (76)     19      16    22
+% 
+%       The study of classification of types of glass was motivated by 
+%       criminological investigation.  At the scene of the crime, the glass left
+%       can be used as evidence...if it is correctly identified!
+% 
+% 5. Number of Instances: 214
+% 
+% 6. Number of Attributes: 10 (including an Id#) plus the class attribute
+%    -- all attributes are continuously valued
+% 
+% 7. Attribute Information:
+%    1. Id number: 1 to 214
+%    2. RI: refractive index
+%    3. Na: Sodium (unit measurement: weight percent in corresponding oxide, as 
+%                   are attributes 4-10)
+%    4. Mg: Magnesium
+%    5. Al: Aluminum
+%    6. Si: Silicon
+%    7. K: Potassium
+%    8. Ca: Calcium
+%    9. Ba: Barium
+%   10. Fe: Iron
+%   11. Type of glass: (class attribute)
+%       -- 1 building_windows_float_processed
+%       -- 2 building_windows_non_float_processed
+%       -- 3 vehicle_windows_float_processed
+%       -- 4 vehicle_windows_non_float_processed (none in this database)
+%       -- 5 containers
+%       -- 6 tableware
+%       -- 7 headlamps
+% 
+% 8. Missing Attribute Values: None
+% 
+% Summary Statistics:
+% Attribute:   Min     Max      Mean     SD      Correlation with class
+%  2. RI:       1.5112  1.5339   1.5184  0.0030  -0.1642
+%  3. Na:      10.73   17.38    13.4079  0.8166   0.5030
+%  4. Mg:       0       4.49     2.6845  1.4424  -0.7447
+%  5. Al:       0.29    3.5      1.4449  0.4993   0.5988
+%  6. Si:      69.81   75.41    72.6509  0.7745   0.1515
+%  7. K:        0       6.21     0.4971  0.6522  -0.0100
+%  8. Ca:       5.43   16.19     8.9570  1.4232   0.0007
+%  9. Ba:       0       3.15     0.1750  0.4972   0.5751
+% 10. Fe:       0       0.51     0.0570  0.0974  -0.1879
+% 
+% 9. Class Distribution: (out of 214 total instances)
+%     -- 163 Window glass (building windows and vehicle windows)
+%        -- 87 float processed  
+%           -- 70 building windows
+%           -- 17 vehicle windows
+%        -- 76 non-float processed
+%           -- 76 building windows
+%           -- 0 vehicle windows
+%     -- 51 Non-window glass
+%        -- 13 containers
+%        -- 9 tableware
+%        -- 29 headlamps
+% 
+% 
+% 
+%
+%
+%
+%
+% Relabeled values in attribute 'Type'
+%    From: '1'                     To: 'build wind float'    
+%    From: '2'                     To: 'build wind non-float'
+%    From: '3'                     To: 'vehic wind float'    
+%    From: '4'                     To: 'vehic wind non-float'
+%    From: '5'                     To: containers          
+%    From: '6'                     To: tableware           
+%    From: '7'                     To: headlamps           
+%
+@relation Glass
+@attribute 'one' numeric
+@attribute 'two' numeric
+@attribute 'three' numeric
+@attribute 'four' numeric
+@attribute 'Type' { buildwindfloat, buildwindnon-float, vehicwindfloat, vehicwindnon-float, containers, tableware, headlamps}
+@data
+-0.516470,0.287653,-0.448014,0.610466,buildwindfloat
+-0.512585,0.284204,-0.443741,0.605377,vehicwindfloat
+-0.515775,0.283837,-0.448798,0.609458,buildwindfloat
+-0.516926,0.276307,-0.448872,0.606749,tableware
+-0.526503,0.349056,-0.441905,0.616877,buildwindnon-float
+-0.518012,0.287743,-0.448096,0.610866,buildwindnon-float
+-0.516273,0.288504,-0.448923,0.611623,vehicwindfloat
+-0.516688,0.289401,-0.447459,0.609300,buildwindfloat
+-0.521032,0.287743,-0.448354,0.607560,headlamps
+-0.516396,0.284114,-0.450027,0.611779,buildwindnon-float
+-0.515809,0.281830,-0.449417,0.609655,buildwindnon-float
+-0.517490,0.289339,-0.446920,0.611105,buildwindnon-float
+-0.517156,0.297434,-0.448319,0.613013,buildwindfloat
+-0.516313,0.293813,-0.449596,0.612561,vehicwindfloat
+-0.517138,0.283392,-0.450028,0.610845,vehicwindfloat
+-0.515714,0.279709,-0.449958,0.609077,buildwindnon-float
+-0.518462,0.282894,-0.448048,0.606836,headlamps
+-0.515903,0.282807,-0.447726,0.608776,buildwindnon-float
+-0.522097,0.308062,-0.445002,0.609162,containers
+-0.516767,0.287226,-0.447810,0.609507,buildwindnon-float
+-0.517689,0.296253,-0.448426,0.613383,buildwindfloat
+-0.524670,0.325224,-0.442100,0.612331,buildwindnon-float
+-0.516348,0.288729,-0.448644,0.611480,buildwindnon-float
+-0.516313,0.282950,-0.449952,0.610951,buildwindfloat
+-0.520172,0.294153,-0.447860,0.610787,containers
+-0.516124,0.280704,-0.449227,0.609660,buildwindnon-float
+-0.515952,0.279987,-0.448948,0.608857,buildwindnon-float
+-0.518682,0.283137,-0.447759,0.606940,headlamps
+-0.515482,0.281031,-0.448979,0.609070,buildwindnon-float
+-0.515537,0.282959,-0.448962,0.609400,vehicwindfloat
+-0.516190,0.280619,-0.449067,0.609511,buildwindnon-float
+-0.517070,0.288364,-0.449503,0.610790,vehicwindfloat
+-0.515139,0.267569,-0.450516,0.603003,tableware
+-0.514814,0.279950,-0.449298,0.608522,buildwindnon-float
+-0.517085,0.284366,-0.449584,0.611344,buildwindfloat
+-0.516762,0.281694,-0.448918,0.610371,buildwindfloat
+-0.516710,0.281319,-0.449375,0.610689,buildwindfloat
+-0.516393,0.290701,-0.445495,0.607932,buildwindnon-float
+-0.517033,0.282962,-0.449399,0.611158,buildwindnon-float
+-0.515439,0.271539,-0.452262,0.607543,buildwindnon-float
+-0.516628,0.286695,-0.448229,0.610312,buildwindfloat
+-0.516560,0.284433,-0.449355,0.611506,buildwindnon-float
+-0.514782,0.280390,-0.448118,0.608147,buildwindnon-float
+-0.515890,0.282053,-0.448613,0.609111,buildwindnon-float
+-0.516602,0.287985,-0.449343,0.612259,vehicwindfloat
+-0.516128,0.286415,-0.447482,0.609699,buildwindfloat
+-0.513187,0.259241,-0.453087,0.605073,containers
+-0.514458,0.281827,-0.448199,0.608489,buildwindfloat
+-0.515990,0.284737,-0.448555,0.609797,buildwindfloat
+-0.515902,0.285004,-0.448958,0.610373,buildwindnon-float
+-0.517547,0.286146,-0.448626,0.611251,buildwindfloat
+-0.516299,0.284325,-0.449314,0.611154,buildwindnon-float
+-0.515838,0.282246,-0.449256,0.610017,buildwindfloat
+-0.515555,0.279118,-0.449171,0.609035,buildwindnon-float
+-0.520982,0.290326,-0.448478,0.607565,headlamps
+-0.517434,0.284281,-0.449974,0.611243,buildwindfloat
+-0.518146,0.292548,-0.451725,0.610028,headlamps
+-0.516566,0.291407,-0.449239,0.611611,buildwindfloat
+-0.516186,0.285184,-0.449556,0.610979,vehicwindfloat
+-0.515321,0.282399,-0.449678,0.610070,buildwindnon-float
+-0.515682,0.282464,-0.450498,0.611213,buildwindnon-float
+-0.516205,0.286475,-0.449301,0.610945,buildwindfloat
+-0.516021,0.285270,-0.448822,0.609960,buildwindfloat
+-0.516165,0.293153,-0.449988,0.612718,buildwindfloat
+-0.517205,0.297589,-0.449181,0.613823,buildwindfloat
+-0.521036,0.290885,-0.447567,0.607892,headlamps
+-0.517637,0.290238,-0.449400,0.611839,buildwindfloat
+-0.516213,0.288867,-0.450785,0.612718,vehicwindfloat
+-0.522140,0.324554,-0.440127,0.613154,buildwindnon-float
+-0.518204,0.296488,-0.448838,0.613971,buildwindfloat
+-0.518350,0.289540,-0.450077,0.610287,tableware
+-0.516310,0.282280,-0.450565,0.611366,buildwindnon-float
+-0.520091,0.294901,-0.449335,0.609229,tableware
+-0.515645,0.282721,-0.449679,0.610476,buildwindnon-float
+-0.517981,0.298777,-0.448739,0.613644,buildwindfloat
+-0.514589,0.279310,-0.449283,0.608276,buildwindnon-float
+-0.516280,0.285461,-0.447686,0.609764,buildwindfloat
+-0.515916,0.283699,-0.448306,0.610239,buildwindfloat
+-0.516240,0.285569,-0.448297,0.609893,vehicwindfloat
+-0.515676,0.284224,-0.447826,0.609212,buildwindfloat
+-0.516542,0.285800,-0.448636,0.610710,buildwindfloat
+-0.515598,0.281216,-0.449147,0.609635,buildwindfloat
+-0.516743,0.292044,-0.451072,0.613261,vehicwindfloat
+-0.516485,0.285518,-0.449007,0.610194,buildwindfloat
+-0.520570,0.309984,-0.443425,0.611189,containers
+-0.515602,0.281234,-0.450970,0.610707,buildwindnon-float
+-0.523754,0.334566,-0.441343,0.613042,buildwindnon-float
+-0.516537,0.284887,-0.448625,0.610559,buildwindfloat
+-0.516516,0.285519,-0.448825,0.610542,buildwindfloat
+-0.520073,0.305938,-0.446195,0.609904,buildwindnon-float
+-0.518608,0.284167,-0.448260,0.606864,headlamps
+-0.517201,0.287545,-0.448424,0.611554,buildwindfloat
+-0.517753,0.295968,-0.448590,0.613271,buildwindfloat
+-0.518418,0.294810,-0.448225,0.611001,tableware
+-0.519636,0.281705,-0.449012,0.606187,headlamps
+-0.517179,0.293834,-0.449357,0.612973,buildwindfloat
+-0.517960,0.283510,-0.447854,0.606412,headlamps
+-0.519645,0.300505,-0.447817,0.610194,buildwindnon-float
+-0.514959,0.282383,-0.447294,0.608128,buildwindnon-float
+-0.515022,0.283977,-0.448779,0.609934,buildwindnon-float
+-0.515510,0.278535,-0.450652,0.609644,buildwindfloat
+-0.516316,0.280493,-0.450283,0.610745,buildwindnon-float
+-0.515257,0.282503,-0.451468,0.608957,headlamps
+-0.518235,0.281735,-0.448325,0.606491,headlamps
+-0.517727,0.280688,-0.447794,0.605955,headlamps
+-0.516484,0.273179,-0.451209,0.599613,containers
+-0.516289,0.281749,-0.449264,0.609425,buildwindnon-float
+-0.519904,0.286373,-0.448486,0.606864,headlamps
+-0.515787,0.287475,-0.448925,0.609761,buildwindfloat
+-0.523103,0.310843,-0.443995,0.610119,containers
+-0.518369,0.293779,-0.446625,0.611632,buildwindnon-float
+-0.519362,0.284180,-0.448751,0.606373,headlamps
+-0.516146,0.287011,-0.450040,0.611318,buildwindfloat
+-0.518704,0.283141,-0.447337,0.606752,headlamps
+-0.516047,0.287216,-0.448100,0.610050,vehicwindfloat
+-0.516251,0.287204,-0.449026,0.610153,headlamps
+-0.519048,0.293063,-0.448910,0.610949,buildwindnon-float
+-0.512687,0.260199,-0.453017,0.606473,headlamps
+-0.520267,0.306073,-0.443267,0.608322,buildwindnon-float
+-0.518593,0.290578,-0.447197,0.611146,buildwindfloat
+-0.517502,0.287793,-0.448689,0.611320,buildwindnon-float
+-0.516695,0.281489,-0.449102,0.610452,buildwindfloat
+-0.518571,0.302720,-0.448821,0.612867,buildwindnon-float
+-0.518461,0.310057,-0.448180,0.614187,buildwindnon-float
+-0.521961,0.307872,-0.444345,0.610332,containers
+-0.516918,0.284343,-0.448963,0.611153,buildwindfloat
+-0.520173,0.292219,-0.444413,0.605700,headlamps
+-0.520411,0.287984,-0.448198,0.607256,headlamps
+-0.515071,0.285832,-0.450164,0.611801,buildwindfloat
+-0.516623,0.285474,-0.448165,0.610452,buildwindfloat
+-0.515924,0.279877,-0.449273,0.609353,buildwindnon-float
+-0.515725,0.279965,-0.448423,0.608889,buildwindnon-float
+-0.518172,0.282468,-0.447004,0.606144,headlamps
+-0.517465,0.287170,-0.448801,0.611705,buildwindfloat
+-0.522338,0.315275,-0.444621,0.610113,containers
+-0.515803,0.283050,-0.448768,0.610026,buildwindfloat
+-0.516125,0.281098,-0.450325,0.610705,buildwindfloat
+-0.515707,0.281396,-0.448660,0.609236,buildwindnon-float
+-0.516759,0.294775,-0.449544,0.612992,buildwindfloat
+-0.516024,0.280881,-0.449308,0.609627,buildwindnon-float
+-0.516771,0.287275,-0.448389,0.611087,buildwindfloat
+-0.516391,0.286275,-0.450625,0.611089,buildwindfloat
+-0.515655,0.284935,-0.449886,0.611082,buildwindfloat
+-0.520604,0.299104,-0.444338,0.606648,containers
+-0.515792,0.279340,-0.449825,0.609388,buildwindnon-float
+-0.516697,0.285060,-0.449304,0.610902,buildwindnon-float
+-0.515300,0.278304,-0.450775,0.609097,buildwindnon-float
+-0.518851,0.295307,-0.449077,0.611295,buildwindnon-float
+-0.514352,0.272608,-0.452375,0.608724,buildwindnon-float
+-0.515030,0.281544,-0.449735,0.610054,buildwindnon-float
+-0.512680,0.258897,-0.451455,0.605541,headlamps
+-0.515796,0.293362,-0.449603,0.612007,buildwindfloat
+-0.524083,0.325213,-0.445474,0.613171,buildwindnon-float
+-0.515490,0.281465,-0.449606,0.610122,buildwindnon-float
+-0.516502,0.285851,-0.449314,0.610405,vehicwindfloat
+-0.517006,0.286106,-0.448915,0.610964,buildwindfloat
+-0.518854,0.280973,-0.449026,0.605714,headlamps
+-0.519528,0.297906,-0.446570,0.609780,containers
+-0.514932,0.287983,-0.450311,0.611398,buildwindfloat
+-0.515244,0.283632,-0.448962,0.609640,buildwindnon-float
+-0.525418,0.338559,-0.439203,0.614107,buildwindnon-float
+-0.516576,0.293019,-0.449294,0.612655,buildwindfloat
+-0.520057,0.284700,-0.449130,0.607140,headlamps
+-0.517234,0.273343,-0.451767,0.600461,containers
+-0.525316,0.340880,-0.438424,0.614006,buildwindnon-float
+-0.516165,0.293153,-0.449988,0.612718,buildwindfloat
+-0.516391,0.285814,-0.448135,0.610289,buildwindfloat
+-0.516851,0.286533,-0.449021,0.611819,buildwindnon-float
+-0.515388,0.281272,-0.449310,0.609315,buildwindnon-float
+-0.520131,0.285024,-0.449591,0.606917,headlamps
+-0.515617,0.285553,-0.448032,0.609643,buildwindnon-float
+-0.517530,0.283678,-0.449400,0.611379,buildwindnon-float
+-0.516598,0.294912,-0.449511,0.612851,buildwindfloat
+-0.514252,0.266569,-0.447668,0.602791,headlamps
+-0.515947,0.282213,-0.451092,0.610385,buildwindfloat
+-0.518123,0.285117,-0.448607,0.609203,headlamps
+-0.515061,0.288616,-0.450191,0.611045,buildwindfloat
+-0.515167,0.284079,-0.447438,0.608671,buildwindfloat
+-0.522184,0.312865,-0.443130,0.612387,containers
+-0.520441,0.307140,-0.445200,0.609134,tableware
+-0.514874,0.281129,-0.447935,0.608154,buildwindnon-float
+-0.516179,0.280931,-0.450037,0.609979,buildwindnon-float
+-0.516851,0.286499,-0.449994,0.610687,vehicwindfloat
+-0.520885,0.308987,-0.445542,0.609426,buildwindnon-float
+-0.516622,0.287255,-0.448085,0.610459,buildwindfloat
+-0.518783,0.284143,-0.447126,0.606822,headlamps
+-0.516041,0.286622,-0.448013,0.610071,buildwindfloat
+-0.517314,0.289266,-0.448651,0.610330,buildwindfloat
+-0.516811,0.284299,-0.449834,0.611084,vehicwindfloat
+-0.522712,0.317800,-0.444465,0.610782,containers
+-0.516293,0.288255,-0.449369,0.610525,buildwindfloat
+-0.517564,0.289229,-0.448274,0.610394,buildwindfloat
+-0.518290,0.292407,-0.449003,0.610497,tableware
+-0.520264,0.287310,-0.448230,0.606805,headlamps
+-0.521788,0.302956,-0.446777,0.608831,tableware
+-0.516934,0.290363,-0.448902,0.611907,buildwindnon-float
+-0.516093,0.280448,-0.449345,0.609648,buildwindnon-float
+-0.515431,0.279263,-0.448990,0.608747,buildwindnon-float
+-0.517089,0.281525,-0.448995,0.610127,buildwindnon-float
+-0.516534,0.280851,-0.449433,0.610298,buildwindnon-float
+-0.515773,0.280991,-0.449692,0.609348,buildwindnon-float
+-0.517308,0.287832,-0.449305,0.611601,buildwindfloat
+-0.516556,0.286462,-0.449848,0.610427,vehicwindfloat
+-0.517053,0.285838,-0.448880,0.611438,buildwindfloat
+-0.515036,0.284588,-0.448251,0.608640,buildwindnon-float
+-0.515759,0.284067,-0.448901,0.609834,buildwindfloat
+-0.521303,0.287351,-0.448653,0.607565,headlamps
+-0.515349,0.278061,-0.449647,0.608925,buildwindfloat
+-0.515953,0.284278,-0.448005,0.609715,buildwindfloat
+-0.514886,0.282719,-0.448334,0.608505,vehicwindfloat
+-0.516400,0.279784,-0.449574,0.609185,buildwindnon-float
+-0.516241,0.279675,-0.450871,0.610696,buildwindnon-float
+-0.516833,0.285215,-0.447501,0.608643,buildwindnon-float
+-0.518542,0.290357,-0.449259,0.610149,tableware
+%
+%
+%

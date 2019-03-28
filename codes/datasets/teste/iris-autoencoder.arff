@@ -1,0 +1,223 @@
+% 1. Title: Iris Plants Database
+% 
+% 2. Sources:
+%      (a) Creator: R.A. Fisher
+%      (b) Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)
+%      (c) Date: July, 1988
+% 
+% 3. Past Usage:
+%    - Publications: too many to mention!!!  Here are a few.
+%    1. Fisher,R.A. "The use of multiple measurements in taxonomic problems"
+%       Annual Eugenics, 7, Part II, 179-188 (1936); also in "Contributions
+%       to Mathematical Statistics" (John Wiley, NY, 1950).
+%    2. Duda,R.O., & Hart,P.E. (1973) Pattern Classification and Scene Analysis.
+%       (Q327.D83) John Wiley & Sons.  ISBN 0-471-22361-1.  See page 218.
+%    3. Dasarathy, B.V. (1980) "Nosing Around the Neighborhood: A New System
+%       Structure and Classification Rule for Recognition in Partially Exposed
+%       Environments".  IEEE Transactions on Pattern Analysis and Machine
+%       Intelligence, Vol. PAMI-2, No. 1, 67-71.
+%       -- Results:
+%          -- very low misclassification rates (0% for the setosa class)
+%    4. Gates, G.W. (1972) "The Reduced Nearest Neighbor Rule".  IEEE 
+%       Transactions on Information Theory, May 1972, 431-433.
+%       -- Results:
+%          -- very low misclassification rates again
+%    5. See also: 1988 MLC Proceedings, 54-64.  Cheeseman et al's AUTOCLASS II
+%       conceptual clustering system finds 3 classes in the data.
+% 
+% 4. Relevant Information:
+%    --- This is perhaps the best known database to be found in the pattern
+%        recognition literature.  Fisher's paper is a classic in the field
+%        and is referenced frequently to this day.  (See Duda & Hart, for
+%        example.)  The data set contains 3 classes of 50 instances each,
+%        where each class refers to a type of iris plant.  One class is
+%        linearly separable from the other 2; the latter are NOT linearly
+%        separable from each other.
+%    --- Predicted attribute: class of iris plant.
+%    --- This is an exceedingly simple domain.
+% 
+% 5. Number of Instances: 150 (50 in each of three classes)
+% 
+% 6. Number of Attributes: 4 numeric, predictive attributes and the class
+% 
+% 7. Attribute Information:
+%    1. sepal length in cm
+%    2. sepal width in cm
+%    3. petal length in cm
+%    4. petal width in cm
+%    5. class: 
+%       -- Iris Setosa
+%       -- Iris Versicolour
+%       -- Iris Virginica
+% 
+% 8. Missing Attribute Values: None
+% 
+% Summary Statistics:
+%  	           Min  Max   Mean    SD   Class Correlation
+%    sepal length: 4.3  7.9   5.84  0.83    0.7826   
+%     sepal width: 2.0  4.4   3.05  0.43   -0.4194
+%    petal length: 1.0  6.9   3.76  1.76    0.9490  (high!)
+%     petal width: 0.1  2.5   1.20  0.76    0.9565  (high!)
+% 
+% 9. Class Distribution: 33.3% for each of 3 classes.
+
+@RELATION iris
+
+@ATTRIBUTE one	REAL
+@ATTRIBUTE two 	REAL
+@ATTRIBUTE class 	{Iris-setosa,Iris-versicolor,Iris-virginica}
+
+@DATA
+0.595791,0.506829,Iris-setosa
+0.477136,0.437643,Iris-setosa
+0.544290,0.463923,Iris-setosa
+0.594597,0.484274,Iris-setosa
+0.645133,0.527757,Iris-setosa
+0.760345,0.593673,Iris-setosa
+0.656536,0.512218,Iris-setosa
+0.614567,0.511605,Iris-setosa
+0.537557,0.447102,Iris-setosa
+0.539391,0.473151,Iris-setosa
+0.634537,0.538937,Iris-setosa
+0.682686,0.537309,Iris-setosa
+0.495105,0.446777,Iris-setosa
+0.491982,0.425375,Iris-setosa
+0.559913,0.519545,Iris-setosa
+0.797644,0.626645,Iris-setosa
+0.634220,0.531374,Iris-setosa
+0.596115,0.502760,Iris-setosa
+0.674090,0.566687,Iris-setosa
+0.720792,0.565923,Iris-setosa
+0.604454,0.522497,Iris-setosa
+0.690067,0.545990,Iris-setosa
+0.592185,0.485715,Iris-setosa
+0.629259,0.509618,Iris-setosa
+0.777280,0.584033,Iris-setosa
+0.521904,0.463728,Iris-setosa
+0.646747,0.519040,Iris-setosa
+0.609028,0.517340,Iris-setosa
+0.546448,0.485902,Iris-setosa
+0.638883,0.510647,Iris-setosa
+0.589540,0.489720,Iris-setosa
+0.542040,0.483208,Iris-setosa
+0.794995,0.616587,Iris-setosa
+0.739955,0.597613,Iris-setosa
+0.539391,0.473151,Iris-setosa
+0.457877,0.433155,Iris-setosa
+0.491084,0.470997,Iris-setosa
+0.539391,0.473151,Iris-setosa
+0.537075,0.447390,Iris-setosa
+0.596273,0.506541,Iris-setosa
+0.582878,0.492249,Iris-setosa
+0.301765,0.327215,Iris-setosa
+0.599172,0.479116,Iris-setosa
+0.678444,0.526764,Iris-setosa
+0.847240,0.624152,Iris-setosa
+0.495754,0.438638,Iris-setosa
+0.751999,0.585568,Iris-setosa
+0.594115,0.484562,Iris-setosa
+0.652831,0.544001,Iris-setosa
+0.551987,0.480168,Iris-setosa
+1.199476,0.828144,Iris-versicolor
+1.246502,0.823311,Iris-versicolor
+1.250108,0.844425,Iris-versicolor
+0.973407,0.656390,Iris-versicolor
+1.135545,0.770370,Iris-versicolor
+1.249717,0.803449,Iris-versicolor
+1.359231,0.871318,Iris-versicolor
+0.892529,0.605825,Iris-versicolor
+1.147651,0.789308,Iris-versicolor
+1.121276,0.715390,Iris-versicolor
+0.813103,0.568458,Iris-versicolor
+1.181281,0.770183,Iris-versicolor
+0.849916,0.627415,Iris-versicolor
+1.270976,0.826134,Iris-versicolor
+1.015280,0.684205,Iris-versicolor
+1.128716,0.780750,Iris-versicolor
+1.330757,0.832100,Iris-versicolor
+1.073277,0.732433,Iris-versicolor
+0.972604,0.674810,Iris-versicolor
+0.985030,0.675616,Iris-versicolor
+1.433538,0.883147,Iris-versicolor
+1.018886,0.705319,Iris-versicolor
+1.173580,0.779633,Iris-versicolor
+1.239279,0.818411,Iris-versicolor
+1.089646,0.752713,Iris-versicolor
+1.115961,0.769952,Iris-versicolor
+1.143401,0.790396,Iris-versicolor
+1.287827,0.846126,Iris-versicolor
+1.226532,0.795980,Iris-versicolor
+0.871336,0.628186,Iris-versicolor
+0.940745,0.649243,Iris-versicolor
+0.908889,0.637738,Iris-versicolor
+1.010864,0.693144,Iris-versicolor
+1.353946,0.853632,Iris-versicolor
+1.367345,0.842229,Iris-versicolor
+1.382100,0.871225,Iris-versicolor
+1.223634,0.823405,Iris-versicolor
+0.953179,0.678174,Iris-versicolor
+1.203984,0.777941,Iris-versicolor
+1.035504,0.688116,Iris-versicolor
+1.192353,0.770347,Iris-versicolor
+1.270494,0.826423,Iris-versicolor
+1.011346,0.692855,Iris-versicolor
+0.843186,0.584898,Iris-versicolor
+1.142369,0.745926,Iris-versicolor
+1.216897,0.792521,Iris-versicolor
+1.186172,0.772588,Iris-versicolor
+1.126234,0.762841,Iris-versicolor
+0.792720,0.560766,Iris-versicolor
+1.123593,0.741151,Iris-versicolor
+1.772053,1.037160,Iris-virginica
+1.391507,0.851551,Iris-virginica
+1.499728,0.949762,Iris-virginica
+1.519465,0.939898,Iris-virginica
+1.578285,0.960503,Iris-virginica
+1.628975,1.033462,Iris-virginica
+1.304220,0.780096,Iris-virginica
+1.557243,0.998278,Iris-virginica
+1.385157,0.887339,Iris-virginica
+1.732084,1.054745,Iris-virginica
+1.419016,0.891346,Iris-virginica
+1.344805,0.852314,Iris-virginica
+1.428485,0.902656,Iris-virginica
+1.316497,0.805245,Iris-virginica
+1.424176,0.847065,Iris-virginica
+1.501345,0.915350,Iris-virginica
+1.482395,0.930058,Iris-virginica
+1.890926,1.166807,Iris-virginica
+1.581729,1.003531,Iris-virginica
+1.166848,0.762812,Iris-virginica
+1.535999,0.952327,Iris-virginica
+1.396405,0.842323,Iris-virginica
+1.579791,1.016317,Iris-virginica
+1.236650,0.799150,Iris-virginica
+1.602987,0.986458,Iris-virginica
+1.574089,1.004207,Iris-virginica
+1.254462,0.804502,Iris-virginica
+1.366384,0.856867,Iris-virginica
+1.471095,0.906762,Iris-virginica
+1.448282,0.949472,Iris-virginica
+1.445162,0.942131,Iris-virginica
+1.759096,1.118094,Iris-virginica
+1.471419,0.902692,Iris-virginica
+1.329788,0.858372,Iris-virginica
+1.461610,0.918718,Iris-virginica
+1.453675,0.942385,Iris-virginica
+1.676654,0.994795,Iris-virginica
+1.531737,0.950985,Iris-virginica
+1.353147,0.846357,Iris-virginica
+1.409709,0.897880,Iris-virginica
+1.510332,0.926948,Iris-virginica
+1.315764,0.843016,Iris-virginica
+1.391507,0.851551,Iris-virginica
+1.617356,0.988541,Iris-virginica
+1.604284,0.970179,Iris-virginica
+1.352834,0.852856,Iris-virginica
+1.206409,0.778929,Iris-virginica
+1.388450,0.875194,Iris-virginica
+1.631561,0.972779,Iris-virginica
+1.466034,0.898145,Iris-virginica
+%
+%
+%
